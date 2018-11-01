@@ -6,7 +6,7 @@
     var credentialsAccessToken ="fe3563c6ac5f43be9714f35d7572e692";
 
     //var bot name is used for the firebase database
-    var credentialsBotName = "buddy-d9942";
+    // var credentialsBotName = "buddy-d9942";
 
 
     // // HighSchoolAna(Dev)
@@ -18,11 +18,11 @@
     var credentialsBaseUrl = "https://api.api.ai/v1/";
 
     // Initialize Firebase
-    var credentialsConfig = {
-       apiKey: "AIzaSyC5du1J31Z9pB-_YaVOhmgmhpcupxcHrN8",
-       authDomain: "buddy-d9942.firebaseapp.com",
-       databaseURL: "https://buddy-d9942.firebaseio.com",
-       projectId: "buddy-d9942",
-       storageBucket: "buddy-d9942.appspot.com",
-       messagingSenderId: "1082877982683"
-    };
+    // var credentialsConfig = {
+    //    apiKey: "AIzaSyC5du1J31Z9pB-_YaVOhmgmhpcupxcHrN8",
+    //    authDomain: "buddy-d9942.firebaseapp.com",
+    //    databaseURL: "https://buddy-d9942.firebaseio.com",
+    //    projectId: "buddy-d9942",
+    //    storageBucket: "buddy-d9942.appspot.com",
+    //    messagingSenderId: "1082877982683"
+    // };
