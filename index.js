@@ -7,12 +7,12 @@
 var accessToken = credentialsAccessToken;
 
 //var bot name is used for the firebase database
-var botName = credentialsBotName;
+// var botName = credentialsBotName;
 
 var baseUrl = credentialsBaseUrl;
 
 // Initialize Firebase
-var config = credentialsConfig;
+// var config = 0;
 
 // The format for config is as follows
 // Set the configuration for your app
@@ -26,11 +26,10 @@ var config = credentialsConfig;
 // };
 
 
-firebase.initializeApp(config);
 
 // Key for this instance of the chat interface
-var newKey = firebase.database().ref(botName).push().key;
-console.log("Key for this chat instance = " + newKey);
+// var newKey = firebase.database().ref(botName).push().key;
+// console.log("Key for this chat instance = " + newKey);
 
 //---------------------------------- Main Code Area ----------------------------------//
 //  Variables to be used for storing the last message sent and recieved for the database
@@ -144,14 +143,13 @@ function send(text) {
 
 	// Find the last message in the chatlogs
 	var $sentMessage = $(".chatlogs .chat").last();
-
-console.log("hel")	
+	
 	// Check to see if that message is visible
 	checkVisibility($sentMessage);
 
 	// update the last message sent variable to be stored in the database and store in database
 	lastSentMessage = text;
-	storeMessageToDB();
+	// storeMessageToDB();
 
 
 	// AJAX post request, sends the users text to API.AI and 
@@ -407,28 +405,28 @@ function createNewMessage(message) {
 
 //------------------------------------------- Database Write --------------------------------------------------//
 
-function storeMessageToDB() {
+// function storeMessageToDB() {
   
-	var date = new Date();
-	console.log(date);
-	if (lastRecievedMessage == 1) {
- 		var storeMessage = firebase.database().ref(botName).child(newKey).push({
-    		UserResponse: lastSentMessage,
-			Time: date + ""
-		});
-  	}
+// 	var date = new Date();
+// 	console.log(date);
+// 	if (lastRecievedMessage == 1) {
+//  		var storeMessage = firebase.database().ref(botName).child(newKey).push({
+//     		UserResponse: lastSentMessage,
+// 			Time: date + ""
+// 		});
+//   	}
 	
-	else {
+// 	else {
 
-		var storeMessage = firebase.database().ref(botName).child(newKey).push({
-    		Question: lastRecievedMessage,
-    		UserResponse: lastSentMessage,
-			ButtonClicked: ButtonClicked,
-			Time: date + ""
-  		});
-	}
+// 		var storeMessage = firebase.database().ref(botName).child(newKey).push({
+//     		Question: lastRecievedMessage,
+//     		UserResponse: lastSentMessage,
+// 			ButtonClicked: ButtonClicked,
+// 			Time: date + ""
+//   		});
+// 	}
 
-}
+// }
 
 
 
