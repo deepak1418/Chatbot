@@ -1,5 +1,4 @@
-# ChatBot
-## Built With
+# About
 
 * [API.AI](https://api.ai) - Used to build conversation experiences
 * [Firebase](https://firebase.google.com) - Used for the Realtime Database
